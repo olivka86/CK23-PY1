@@ -25,7 +25,7 @@ class Book(BaseModel):
 class Library(BaseModel):
     books: List[Book] = []
 
-    def get_next_book_id(self):
+    def get_next_book_id(self) -> int:
         if self.books:
             return len(self.books) + 1
         return 1
